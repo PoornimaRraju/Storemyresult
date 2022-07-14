@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="http://127.0.0.1:5500/results/SRM/Templates/stylepages.css">
+</head>
+<body>
+   <div class="container">
+    <h1>Enter details to create account</h1>
+    <form action="signup" method="post">
+        <label>First Name</label>
+        <input type="text" class="form-control" name="firstName" required>
+        <br>
+        <label>Last Name</label>
+        <input type="text" class="form-control" name="lastName"required>
+        <br>
+        <label>username</label>
+        <input type="text" class="form-control" name="username"required>
+        <br>
+        <label> email</label>
+        <input type="email" class="form-control" name="email"required>
+        <br>
+        <label>password</label>
+        <input type="password" class="form-control" name="password" required>
+        <br>
+        <label>confirm password</label>
+        <input type="password" class="form-control" name="password2"required>
+        <input type="submit" class="btn" value="Sign Up">
+    </div>
+    </form>
+</body>
+</html>

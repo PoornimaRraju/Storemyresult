@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Result</title>   
+        <link rel="stylesheet" href="http://127.0.0.1:5500/results/SRM/Templates/styl.css">
+    </head>
+    <body>
+     <h1>Result</h1>
+    <?php
+    include('connect-mysql.php');
+    $sqlget="select * from sem1rec1";
+    $sqldata=mysqli_query($dbcon,$sqlget) or die('error getting');
+    echo "<table>";
+    echo "<tr><th>Subjectcode</th><th>Subjectname</th><th>InternalMarks</th><th>ExternalMarks</th><th>Total</th><th>Result</th></tr>";
+    while($row=mysqli_fetch_array($sqldata,MYSQLI_ASSOC)){
+            echo "<tr><td>";
+            echo $row['Subjectcode'];
+            echo "</td><td>";
+            echo $row['Subjectname'];
+            echo "</td><td>";
+            echo $row['InternalMarks'];
+            echo "</td><td>";
+            echo $row['ExternalMarks'];
+            echo "</td><td>";
+            echo $row['Total'];
+            echo "</td><td>";
+            echo $row['Result'];
+            echo "</td></tr>";
+            }
+            echo "</table>";
+        ?>
+    </body>
+</html>
+
